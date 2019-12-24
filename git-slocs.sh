@@ -19,9 +19,9 @@ fi
 git ls-tree -r -z --name-only HEAD -- $code_pattern \
     | xargs -0 -n1 git blame -t --name-only \
     | gawk '{ \
-        if (gsub(/^\(/, "", $2 )) \
+        if (gsub(/^\(/, "", $2)) \
             printf "%d %s %s %s\n", $4, $1, $2, $3; \
-        else if (gsub(/^\(/, "", $3 )) \
+        else if (gsub(/^\(/, "", $3)) \
             printf "%d %s %s %s\n", $5, $1, $3, $4; \
         else
             print "BAD LINE: " $0; \
