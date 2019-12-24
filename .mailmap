@@ -1,0 +1,15 @@
+# @file .mailmap - Used by git to map commits, blames, guilt, etc. to
+#                  canonical author names with multiple email addresses.
+# Example A) A general summary of "contributions":      git summary
+# Example B) Who changed the code in the last 3 weeks?  git guilt `git log --until="3 weeks ago" --format="%H" -n 1`
+# Example C) But "git standup" does NOT use .mailmap:   git standup -a all -d 3  # not consolidated by name
+# Example D) Blame counts for all "code" in your current branch as of 42 commits ago, not counting whitespace changes:
+#     code='*.cc *.h *.md *.sh *.txt *.yaml */*.cc */*.h */*.hpp */*.md */*.py */*.sh */*.yml .*/*.yml .circleci/*/*/Dockerfile */*.txt */*/*.cc */*/*.h'
+#     git ls-tree -r -z --name-only HEAD -- $code|xargs -0 -n1 git blame --line-porcelain HEAD~42|grep  "^author "|sort|uniq -c|sort -nr
+#
+# To update this file (beyond changing your preferred alias), you may want to use the output of `git summary -e`
+#
+Sprax Lines <Sprax Lines>
+Sprax Lines <sprax@comcast.net>
+Sprax Lines <sprax@talla.com>
+Sprax Lines <sprax@users.noreply.github.com>
