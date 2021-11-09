@@ -7,7 +7,7 @@
 # that match the (default) code_pattern,
 # attribute each one (including blanks) to an author,
 # group them by author [or the given 'search_field'],
-# and output in descending order:
+# and output in sorted-descending order:
 #
 #   total-slocs    author
 #
